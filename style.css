@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*      BACKGROUND   */
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../1.jpg);
+    background-size: 100% 100%;
+}
+
+
+/*     NAVBAR   */
+
+.brand {
+    margin-left: 32px;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.navbar h1 {
+    color: #ff7200;
+    font-size: 2rem;
+}
+
+/*      NAVBAR : LIST       */
+
+.navbar ul {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+}
+
+.navbar ul li {
+    margin-left: 2rem;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    border-radius: 20px;
+    padding: 0.1rem 1.2rem;
+    z-index: 1;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: 0.2s;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+
+/*      NAVBAR : SEARCH      */
+
+
+.search {
+    margin-left: 3rem;
+}
+
+.search input {
+    height: 2rem;
+    padding: 0 1rem;
+    border: solid 2px #ff7200;
+    border-radius: 10px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search button {
+    height: 2rem;
+    padding: 0 0.5rem;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #ff7200;
+    border: none;
+}
+
+
+
+/*     MID-SECTION      */
+.mid-section {
+    display: flex;
+    align-items: center;
+
+}
+
+
+/*    MID-SECTION : DETAILS      */
+
+.details {
+    width: 65%;
+    margin: 6rem 2rem;
+}
+
+.details h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.details p {
+    color: white;
+    line-height: 2;
+    margin-top: 2rem;
+}
+
+
+/*     MID-SECTION : BUTTON      */
+
+.details button {
+    padding: 4.8px 48px;
+    border-radius: 20px;
+    margin-top: 3rem;
+    background: transparent;
+    color: white;
+    border: solid 1px #009688;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.details button::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background-color: #009688;
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.2s;
+    opacity: 0.5;
+}
+
+.details button:hover::before {
+    width: 100%;
+}
+
+.details button:hover {
+    border: none;
+    padding: 5.8px 49px;
+}
+
+
+/*      MID-SECTION : LOGIN      */
+
+.login {
+    padding: 3rem 1.5rem;
+    margin-left: 32px;
+    position: relative;
+    text-align: center; 
+    width: 270px;
+    z-index: 1;
+    margin-right: 32px;
+}
+
+.login::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.7;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.login h1 {
+    background-color: white;
+    padding: 0.2rem 0;
+    color: #ff7200;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.login input {
+    display: block;
+    background: transparent;
+    font-size: 1rem;
+    border-bottom: solid 2px #ff7200; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    color: #fff;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.login input:focus {
+    outline: none;
+}
+
+
+input::placeholder {
+    color: white;
+}
+
+.login button {
+    background-color: #ff7200;
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.4rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+
+
+.login p {
+    color: #fff;
+}
+
+.login p a {
+    color: #ff7200;
+    text-decoration: none;
+}
+
+/* MEDIA QUERRIRES */
+
+@media (max-width: 880px){
+    .navbar ul li a {
+        font-size: 13px;
+    }
+    .navbar ul li {
+        margin-left: 1rem;
+    }
+    .mid-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .join-btn {
+        padding: 6px 48px;
+    }
+    .main {
+        background-size: cover;
+        background-position: center;
+    }
+    .log {
+        display: flex;
+        padding: 40px 0;
+        justify-content: center;
+        width: 100%;
+        background-color: #E4F9F5;
+    }
+    .details {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .navbar ul li a {
+        font-size: x-small;
+    }
+    .navbar ul li {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+    .navbar ul li a {
+        font-size: xx-small;
+    }
+    .navbar ul li {
+        margin-left: 1px;
+    }
+}
+
